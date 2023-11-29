@@ -1,0 +1,79 @@
+# Exercise 1: Personalized Greeting
+
+name = 'Alice'
+print(f'Hello, {name}')
+
+# Exercise 2: Greeting with User's Favorite Activity
+
+name = 'Emily'
+activity = 'hiking'
+print(f'Hello, {name} ! Enjoy {activity}')
+
+# Exercise 3: Membership Cards
+
+print('Welcome, {}! Your name in uppercase is:'.format('Emily'),str.upper('EMILY'))
+
+# Exercise 4: User Profile Creation
+
+first_name = input('first name: ')
+last_name = input('last name: ')
+age = input('age: ')
+name = input('name: ')
+
+print(str.title(name), 'is', str(age), 'years old')
+print(str.upper(name), 'is', str(age), 'years old')
+print(str.format(name), 'is', str(age), 'years old')
+
+# Exercise 5: Text message limits
+
+text = input('Enter the text to be formatted: ')
+print("Length: " + str(len(text)))
+
+# Exercise 6: Text Transformation Game
+
+sentence = input("Enter a sentence: ")
+transformed_sentence = sentence.replace('o','*').replace('e',"*")
+print(transformed_sentence)
+
+# Exercise 7: Extracting Information
+
+data = "lucy smith:28"
+print(str.title(data[:10]))
+print(str(data[-2:]))
+
+# Exercise 8: Miles to Kilometers Conversion
+
+miles = float(input("Enter distance in miles: "))
+kilometers = miles * 1.6
+
+print(kilometers)
+
+# Exercise 9: Workouts calculator
+
+str_cardio = input('minutes doing cardio: ')
+str_strength_training = input('minutes strength training: ')
+str_yoga = input('minutes doing yoga: ')
+cardio = int(str_cardio)
+strength_training = int(str_strength_training)
+yoga = int(str_yoga)
+total_workout = cardio + strength_training + yoga
+
+print(f'you have done a total of',(total_workout), 'minutes working out, keep pushing to reach your daily workout goals')
+
+# ---------------------------------------------------------------------
+# Challenge 1 (OPTIONAL!): Reverse the negative integer -324 and keep
+# the negative symbol. Expected output: -423
+input_number = -324
+# Convert the integer to a string to handle the negative symbol separately
+num_str = str(input_number)
+
+# Reverse the digits (excluding the negative symbol) using slicing [::-1]
+# Use this simple guide to help you slice the reversed string:
+reversed_str = num_str[:0:-1]
+
+# Add the negative symbol back to the reversed string
+reversed_num = int(num_str[0] + reversed_str)
+
+# Output the result
+print(reversed_num)
+# -423
